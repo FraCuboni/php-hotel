@@ -75,11 +75,16 @@ $hotels = [
 
                     <?php
 
+                    $counter = 1;
+
                     foreach ($hotels as $hotel) {
                         $name = $hotel["name"];
+                        echo $name;
+                        $counter++;
                     }
 
-                    echo $name
+
+
 
                     ?>
 
