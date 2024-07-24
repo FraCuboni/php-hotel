@@ -67,7 +67,7 @@ $hotels = [
                             <th scope="col">Description</th>
                             <th scope="col">Parking</th>
                             <th scope="col">Rating</th>
-                            <th scope="col">Distance from center</th>
+                            <th scope="col">Distance to center</th>
                         </tr>
                     </thead>
 
@@ -78,6 +78,10 @@ $hotels = [
                     $counter = 1;
 
                     foreach ($hotels as $hotel) {
+                        $name = $hotel["name"];
+                        $name = $hotel["name"];
+                        $name = $hotel["name"];
+                        $name = $hotel["name"];
                         $name = $hotel["name"];
                         echo $name;
                         $counter++;
