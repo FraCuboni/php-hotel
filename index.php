@@ -60,6 +60,8 @@ $hotels = [
             <div class="col-1"></div>
             <div class="col-10">
                 <table class="table table-bordered">
+
+                    <!-- head -->
                     <thead>
                         <tr>
                             <th scope="col">#</th>
@@ -71,34 +73,35 @@ $hotels = [
                         </tr>
                     </thead>
 
-                    <!-- php per generazione elementi in tabella -->
 
-                    <?php
-
-                    $counter = 1;
-
-                    foreach ($hotels as $hotel) {
-                        $name = $hotel["name"];
-                        $name = $hotel["name"];
-                        $name = $hotel["name"];
-                        $name = $hotel["name"];
-                        $name = $hotel["name"];
-                        echo $name;
-                        $counter++;
-                    }
-
-
-
-
-                    ?>
-
+                    <!-- body -->
                     <tbody>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                        </tr>
+
+                        <!-- php per generazione elementi in tabella -->
+                        <?php
+
+                        $counter = 0;
+
+                        foreach ($hotels as $hotel) {
+
+                            $name = $hotel["name"];
+                            $description = $hotel["description"];
+                            $parking = $hotel["parking"];
+                            $vote = $hotel["vote"];
+                            $distance_to_center = $hotel["distance_to_center"];
+
+                            $counter++;
+                            echo "<tr>";
+                            echo "<th scope ='row'>" . $counter . "</th>";
+                            echo "<td>" . $name . "</td>";
+                            echo "<td>" . $description . "</td>";
+                            echo "<td>" . ($parking ? "Yes" : "No") . "</td>";
+                            echo "<td>" . $vote . "/5" . "</td>";
+                            echo "<td>" . $distance_to_center . "km" . "</td>";
+                            echo "</tr>";
+                        }
+                        ?>
+
                     </tbody>
                 </table>
             </div>
